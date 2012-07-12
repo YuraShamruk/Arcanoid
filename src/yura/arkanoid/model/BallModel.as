@@ -15,9 +15,9 @@ public class BallModel extends EventDispatcher {
     public var x:uint;
     public var y:uint;
 
-    public function BallModel(x:uint, y:uint) {
-        this.x = x;
-        this.y = y;
+    public function BallModel() {
+        this.x = 50;
+        this.y = 100;
     }
 
     public function locationChanged():void {

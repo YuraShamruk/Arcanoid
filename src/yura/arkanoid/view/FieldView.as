@@ -29,8 +29,8 @@ public class FieldView extends Sprite {
         puddleView.buildByModel(fieldModel.puddle);
         addChild(puddleView);
         var ballView:BallView = new BallView();
-        // ballView.model = fieldModel.ball;
-        ballView.buildByModel(fieldModel.ball);
+        ballView.model = fieldModel.ball;
+        //ballView.buildByModel(fieldModel.ball);
         addChild(ballView);
 
     }

@@ -31,7 +31,7 @@ public class LevelController {
         fieldModel.bricks.push(new BrickModel(60, 10));
         fieldModel.bricks.push(new BrickModel(30, 50));
         fieldModel.puddle = new PuddleModel();
-        fieldModel.ball = new BallModel(fieldModel.puddle.x, fieldModel.puddle.y);
+        fieldModel.ball = new BallModel();
     }
 }
 }
