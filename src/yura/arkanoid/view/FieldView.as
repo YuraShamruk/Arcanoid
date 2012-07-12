@@ -6,15 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 package yura.arkanoid.view {
-import flash.display.DisplayObject;
 import flash.display.Sprite;
 
-import yura.arkanoid.model.BallModel;
-
 import yura.arkanoid.model.BrickModel;
-
 import yura.arkanoid.model.FieldModel;
-import yura.arkanoid.model.PuddleModel;
 
 public class FieldView extends Sprite {
     public function FieldView() {
@@ -34,7 +29,8 @@ public class FieldView extends Sprite {
         puddleView.buildByModel(fieldModel.puddle);
         addChild(puddleView);
         var ballView:BallView = new BallView();
-        ballView.model = fieldModel.ball;
+        // ballView.model = fieldModel.ball;
+        ballView.buildByModel(fieldModel.ball);
         addChild(ballView);
 
     }

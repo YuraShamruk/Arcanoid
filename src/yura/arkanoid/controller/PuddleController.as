@@ -10,12 +10,9 @@ import flash.display.Sprite;
 import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
 
-import yura.arkanoid.KeyboardManager;
-
+import yura.arkanoid.manager.KeyboardManager;
 import yura.arkanoid.model.FieldModel;
 import yura.arkanoid.model.PuddleModel;
-import yura.arkanoid.view.FieldView;
-import yura.arkanoid.view.PuddleView;
 
 public class PuddleController {
     private var puddleModel:PuddleModel = new PuddleModel();
@@ -30,18 +27,20 @@ public class PuddleController {
     }
 
     private function keyPressedDown(event:KeyboardEvent):void {
-       var key:uint = event.keyCode;
-       var step:uint = 5
-       switch (key) {
-           case Keyboard.LEFT :
-             puddleModel.x -= step;
-             break;
-           case Keyboard.RIGHT :
-             puddleModel.x += step;
-             break;
+        var key:uint = event.keyCode;
+        var step:uint = 5
+        switch (key) {
+            case Keyboard.LEFT :
+                puddleModel.x -= step;
+                puddleModel.locationChanged();
+                break;
+            case Keyboard.RIGHT :
+                puddleModel.x += step;
+                puddleModel.locationChanged();
+                break;
 
-       }
-       puddleModel.locationChanged();
-     }
+        }
+
+    }
 }
 }

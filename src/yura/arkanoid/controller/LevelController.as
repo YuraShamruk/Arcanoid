@@ -11,17 +11,18 @@ import yura.arkanoid.model.BrickModel;
 import yura.arkanoid.model.FieldModel;
 import yura.arkanoid.model.PuddleModel;
 import yura.arkanoid.view.FieldView;
-import yura.arkanoid.view.PuddleView;
 
 public class LevelController {
     public var field:FieldView = new FieldView();
     private var fieldModel:FieldModel = new FieldModel();
 
     private var puddleController:PuddleController;
+    private var ballController:BallController;
 
     public function LevelController() {
         buildFirstLevel();
         puddleController = new PuddleController(fieldModel, field);
+        ballController = new BallController(fieldModel, field);
         field.buildByModel(fieldModel);
     }
 
