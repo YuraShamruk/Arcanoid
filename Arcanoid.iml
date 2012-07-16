@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="Arcanoid">
     <configurations>
-      <configuration name="Arcanoid" pure-as="true" main-class="yura.arkanoid.Arkanoid" output-file="Arcanoid.swf" output-folder="$MODULE_DIR$/out/production/Arcanoid" use-html-wrapper="true" wrapper-template-path="$MODULE_DIR$/html-template">
+      <configuration name="Arcanoid" pure-as="true" main-class="Testing" output-file="Arcanoid.swf" output-folder="$MODULE_DIR$/out/production/Arcanoid" use-html-wrapper="true" wrapper-template-path="$MODULE_DIR$/html-template">
         <dependencies target-player="11.1">
           <sdk name="4.6.0" />
         </dependencies>
