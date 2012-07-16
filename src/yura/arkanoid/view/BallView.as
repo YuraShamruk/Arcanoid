@@ -26,7 +26,8 @@ public class BallView extends Shape {
 
     private function draw():void {
         graphics.beginFill(0xFF0000);
-        graphics.drawCircle(_model.x, _model.y, _model.radius);
+//        graphics.drawCircle(_model.x, _model.y, _model.radius);
+        graphics.drawCircle(0, 0, _model.radius);
         graphics.endFill();
     }
 

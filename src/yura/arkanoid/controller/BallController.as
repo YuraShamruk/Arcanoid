@@ -9,7 +9,6 @@ package yura.arkanoid.controller {
 import flash.display.Sprite;
 import flash.events.Event;
 
-import yura.arkanoid.manager.MouseManager;
 import yura.arkanoid.model.BallModel;
 import yura.arkanoid.model.FieldModel;
 
@@ -21,12 +20,12 @@ public class BallController {
 
     private var ballModel:BallModel;
 
-    public function BallController(fieldModel:FieldModel, spriteForKeys:Sprite) {
+    public function BallController(fieldModel:FieldModel, sprite:Sprite) {
         minX = 0;
         minY = 0;
         maxX = fieldModel.width;
         maxY = fieldModel.height;
-        MouseManager.instance.addEventListener(Event.ENTER_FRAME, onFrame)
+        sprite.addEventListener(Event.ENTER_FRAME, onFrame)
     }
 
     private function onFrame(event:Event):void {

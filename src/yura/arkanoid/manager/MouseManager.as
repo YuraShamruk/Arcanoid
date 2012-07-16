@@ -11,10 +11,10 @@ import flash.events.EventDispatcher;
 import flash.events.MouseEvent;
 
 public class MouseManager extends EventDispatcher {
-    private static var _instance:KeyboardManager;
+    private static var _instance:MouseManager;
 
-    public static function get instance():KeyboardManager {
-        return _instance ||= new KeyboardManager();
+    public static function get instance():MouseManager {
+        return _instance ||= new MouseManager();
     }
 
     public function init(stage:Stage):void {
